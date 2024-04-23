@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Item inicial</li>
+    </ul>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <button onclick="removerItem()">Remover Item</button>
+    <script>
+
+        function adicionarItem() {
+            let novoParagrafo = document.createElement('p');
+            novoParagrafo.textContent = "Parágrafo adicionado dinamicamente.";
+            novoParagrafo.id = "paragrafoDinamico";  // Adicionando um ID para facilitar a remoção
+            document.body.appendChild(novoParagrafo);
+
+        }
+
+        function removerItem() {
+            let ultimoParagrafo = document.getElementById('paragrafoDinamico');
+            if (ultimoParagrafo) {
+                document.body.removeChild(ultimoParagrafo);
+            }
+        }
+    </script>
+</body>
+
+</html>

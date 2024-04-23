@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="movable-item" style="width: 100px; height: 100px; background-color: red;">Item</div>
+
+    <script>
+        // Seleciona o elemento
+var movableItem = document.getElementById('movable-item');
+
+// Adiciona um manipulador de eventos para o evento 'mouseover'
+movableItem.addEventListener('mouseover', function() {
+    // Move o elemento 50 pixels para a direita e 50 pixels para baixo
+    movableItem.style.transform = 'translate(100px)';
+});
+
+// Adiciona um manipulador de eventos para o evento 'mouseout' (opcional)
+movableItem.addEventListener('mouseout', function() {
+    // Remove a transformação quando o cursor deixa o elemento
+    movableItem.style.transform = 'none';
+});
+
+    </script>
+
+    
+</body>
+</html>
